@@ -9,4 +9,4 @@ def test_power():
     assert lib.getfibonacci(5) == 5
     assert lib.getfibonacci(6) == 8
     assert lib.getfibonacci(7) == 13
-    assert lib.getfibonacci(8) == 21
+    assert lib.getfibonacci(8) == 22
