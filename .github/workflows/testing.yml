@@ -15,3 +15,11 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run tests
         run: pytest
+      - name: connect to digital ocean
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: whoami
