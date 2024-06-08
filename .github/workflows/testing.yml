@@ -15,6 +15,10 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run tests
         run: pytest
+  job-connect: 
+    needs: run-tests
+    runs-on: ubuntu-20.04
+    steps: 
       - name: connect to digital ocean
         uses: appleboy/ssh-action@v1.0.3
         with:
