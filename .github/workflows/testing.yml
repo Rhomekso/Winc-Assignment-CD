@@ -22,4 +22,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          script: systemctl status flask-site
+          script: |
+          systemctl restart flask-site
+          systemctl status flask-site
