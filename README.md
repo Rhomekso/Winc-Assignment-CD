@@ -56,7 +56,7 @@ A flowchart was created to illustrate the entire setup process, including:
 
 This flowchart helps in understanding the workflow.
 
-![Deployment Flowchart](Mekso-Frame1.jpg)
+![Deployment Flowchart](flowchart.jpg)
 
 
 ## Conclusion
