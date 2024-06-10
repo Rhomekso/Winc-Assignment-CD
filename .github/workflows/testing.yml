@@ -27,7 +27,13 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            cd /home/flask-site
+            cd cd /home/flask-site
+            pwd
+            ls -la
+            if [ ! -d ".git" ]; then
+              echo "Error: Not a Git repository"
+              exit 1
+            fi
             git pull origin main
             systemctl restart flask-site
             systemctl status flask-site
