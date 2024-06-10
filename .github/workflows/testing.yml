@@ -28,7 +28,6 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             if [ ! -d "/home/Winc_CD_repo.git" ]; then
-              rm -rf /home/Winc_CD_repo # Remove any existing directory
               git clone https://github.com/Rhomekso/Winc-Assignment-CD.git /home/Winc_CD_repo
               echo "Repository cloned."
             else
