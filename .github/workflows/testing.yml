@@ -27,13 +27,11 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            cd /home/flask-site
-            pwd
-            ls -la
-            if [ ! -d ".git" ]; then
-              echo "Error: Not a Git repository"
-              exit 1
+            if [ ! -d "/home/flask-site.git" ]; then
+              git clone https://github.com/Rhomekso/Winc-Assignment-CD.git /home/flask-site
+            else
+              cd /home/flask-site
+              git pull
             fi
-            git pull
             systemctl restart flask-site
             systemctl status flask-site
