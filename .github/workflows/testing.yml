@@ -27,6 +27,6 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            bash script_yaml.sh
+            bash /home/Winc_CD_repo/script_yaml.sh
             systemctl restart flask-site
             systemctl status flask-site
