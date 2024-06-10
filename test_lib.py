@@ -11,3 +11,4 @@ def test_power():
     assert lib.getfibonacci(7) == 13
     assert lib.getfibonacci(8) == 21
     assert lib.getfibonacci(9) == 34
+    assert lib.getfibonacci(10) == 55
